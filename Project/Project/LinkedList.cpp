@@ -20,6 +20,17 @@ void LinkedList::append(int val)
 	size++; //when I make a newNode the number of nodes in the list will be increases 
 }
 
+//Print values of currentNode 
+void LinkedList::print()
+{
+	Node* currentNode = head;
+	while (currentNode != nullptr)
+	{
+		cout << currentNode->value << endl;
+		currentNode = currentNode->next;
+	}
+}
+
 LinkedList::LinkedList() : head(nullptr), size(0)
 {
 }
