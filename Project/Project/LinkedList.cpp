@@ -23,7 +23,7 @@ void LinkedList::append(int val)
 	size++; //when I make a newNode the number of nodes in the list will be increases 
 }
 
-//Put a newNode in the any index in the List
+//Put a newNode in the any index of the List
 void LinkedList::insert(int index, int val)
 {
 	assert(index >= 0 && index <= size); //Runtime error if the condition is false (index != negative)
@@ -46,6 +46,28 @@ void LinkedList::insert(int index, int val)
 		currentNode->next = newNode; //next of currentNode equal newNode
 	}
 	size++;
+}
+
+//Delete the node by given an index in the list
+void LinkedList::removeAt(int index)
+{
+	assert(index >= 0 && index <= size);
+	Node* currentNode = head; //currentNode is a pointer points on head
+	if (index == 0)
+	{
+		head = currentNode->next; //the next of current node equal head
+		delete currentNode;
+		return;
+	}
+	int i = 0;
+	while (i < index - 1)
+	{
+		currentNode = currentNode->next;
+		i++;
+	}
+	Node* deletedNode = currentNode->next; //deletedNode is a pointer points on the next of currentNode
+	currentNode->next = deletedNode->next; //the next of currentNode equal the next of deletedNode
+	delete deletedNode;
 }
 
 //Print values of currentNode 

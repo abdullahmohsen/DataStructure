@@ -8,6 +8,7 @@ private:
 public:
 	void append(int val);
 	void insert(int index, int val);
+	void removeAt(int index);
 	void print();
 	LinkedList(); //Constructor
 	~LinkedList(); //Destructor
