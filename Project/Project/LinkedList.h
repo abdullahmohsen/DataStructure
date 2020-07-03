@@ -7,5 +7,6 @@ private:
 	int size; //Number of nodes in the List
 public:
 	LinkedList(); //Constructor
+	~LinkedList(); //Destructor
 };
 
