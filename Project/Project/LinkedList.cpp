@@ -1,4 +1,6 @@
 #include "LinkedList.h"
+#include <iostream>
+using namespace std;
 
 //Put a newNode in the last List
 void LinkedList::append(int val)
