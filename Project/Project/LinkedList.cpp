@@ -48,7 +48,7 @@ void LinkedList::insert(int index, int val)
 	size++;
 }
 
-//Delete the node by given an index in the list
+//Delete a node by given it an index in the list
 void LinkedList::removeAt(int index)
 {
 	assert(index >= 0 && index <= size);
@@ -57,17 +57,22 @@ void LinkedList::removeAt(int index)
 	{
 		head = currentNode->next; //the next of current node equal head
 		delete currentNode;
-		return;
+		//return;
 	}
-	int i = 0;
-	while (i < index - 1)
+	else
 	{
-		currentNode = currentNode->next;
-		i++;
+		int i = 0;
+		while (i < index - 1)
+		{
+			currentNode = currentNode->next;
+			i++;
+		}
+		Node* deletedNode = currentNode->next; //deletedNode is a pointer points on the next of currentNode
+		currentNode->next = deletedNode->next; //the next of currentNode equal the next of deletedNode
+		//currentNode->next = currentNode->next->next;
+		delete deletedNode;
 	}
-	Node* deletedNode = currentNode->next; //deletedNode is a pointer points on the next of currentNode
-	currentNode->next = deletedNode->next; //the next of currentNode equal the next of deletedNode
-	delete deletedNode;
+	size--;
 }
 
 //Print values of currentNode 
