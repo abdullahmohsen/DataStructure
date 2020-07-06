@@ -4,16 +4,17 @@
 using namespace std;
 
 //Put a newNode in the last List
-void LinkedList::append(int val)
+template <class T>
+void LinkedList<T>::append(T val)
 {
-	Node* newNode = new Node(val); //Create a newNode
+	Node<T>* newNode = new Node<T>(T); //Create a newNode
 	if (head == nullptr)
 	{
 		head = newNode;
 	}
 	else
 	{
-		Node* currentNode = head; //currentNode is a pointer points on head
+		Node<T>* currentNode = head; //currentNode is a pointer points on head
 		while (currentNode->next != nullptr) //Next of currentNode not equal Null
 		{
 			currentNode = currentNode->next; //currentNode equal next of currentNode
@@ -24,10 +25,11 @@ void LinkedList::append(int val)
 }
 
 //Put a newNode in the any index of the List
-void LinkedList::insert(int index, int val)
+template <class T>
+void LinkedList<T>::insert(int index, T val)
 {
 	assert(index >= 0 && index <= size); //Runtime error if the condition is false (index != negative)
-	Node* newNode = new Node(val); //Create a newNode
+	Node<T>* newNode = new Node<T>(T); //Create a newNode
 	if (index == 0) //Put a newNode in the place of the head
 	{
 		newNode->next = head; //Next of newNode equal head
@@ -35,7 +37,7 @@ void LinkedList::insert(int index, int val)
 	}
 	else
 	{
-		Node* currentNode = head; //currentNode is a pointer points on head
+		Node<T>* currentNode = head; //currentNode is a pointer points on head
 		int i = 0; //i is the index of nodes in the list
 		while (i < index - 1)
 		{
@@ -49,10 +51,11 @@ void LinkedList::insert(int index, int val)
 }
 
 //Delete a node by given it an index in the list
-void LinkedList::removeAt(int index)
+template <class T>
+void LinkedList<T>::removeAt(int index)
 {
-	assert(index >= 0 && index <= size);
-	Node* currentNode = head; //currentNode is a pointer points on head
+	assert(index >= 0 && index < size);
+	Node<T>* currentNode = head; //currentNode is a pointer points on head
 	if (index == 0)
 	{
 		head = currentNode->next; //the next of current node equal head
@@ -62,12 +65,12 @@ void LinkedList::removeAt(int index)
 	else
 	{
 		int i = 0;
-		while (i < index - 1)
+		while (i < index - 1) //To get the node before I want to remove it
 		{
 			currentNode = currentNode->next;
 			i++;
 		}
-		Node* deletedNode = currentNode->next; //deletedNode is a pointer points on the next of currentNode
+		Node<T>* deletedNode = currentNode->next; //deletedNode is a pointer points on the next of currentNode
 		currentNode->next = deletedNode->next; //the next of currentNode equal the next of deletedNode
 		//currentNode->next = currentNode->next->next;
 		delete deletedNode;
@@ -76,9 +79,10 @@ void LinkedList::removeAt(int index)
 }
 
 //Print values of currentNode 
-void LinkedList::print()
+template <class T>
+void LinkedList<T>::print()
 {
-	Node* currentNode = head;
+	Node<T>* currentNode = head;
 	while (currentNode != nullptr)
 	{
 		cout << currentNode->value << endl;
@@ -86,15 +90,17 @@ void LinkedList::print()
 	}
 }
 
-LinkedList::LinkedList() : head(nullptr), size(0)
+template <class T>
+LinkedList<T>::LinkedList() : head(nullptr), size(0)
 {
 }
 
-LinkedList::~LinkedList()
+template <class T>
+LinkedList<T>::~LinkedList()
 {
 	while (head != nullptr)
 	{
-		Node* currentNode = head->next; //currentNode is a pointer points on the next of head
+		Node<T>* currentNode = head->next; //currentNode is a pointer points on the next of head
 		delete head;
 		head = currentNode;
 	}
