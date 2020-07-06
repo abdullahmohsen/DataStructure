@@ -7,7 +7,7 @@ using namespace std;
 template <class T>
 void LinkedList<T>::append(T val)
 {
-	Node<T>* newNode = new Node<T>(T); //Create a newNode
+	Node<T>* newNode = new Node<T>(val); //Create a newNode
 	if (head == nullptr)
 	{
 		head = newNode;
@@ -29,7 +29,7 @@ template <class T>
 void LinkedList<T>::insert(int index, T val)
 {
 	assert(index >= 0 && index <= size); //Runtime error if the condition is false (index != negative)
-	Node<T>* newNode = new Node<T>(T); //Create a newNode
+	Node<T>* newNode = new Node<T>(val); //Create a newNode
 	if (index == 0) //Put a newNode in the place of the head
 	{
 		newNode->next = head; //Next of newNode equal head

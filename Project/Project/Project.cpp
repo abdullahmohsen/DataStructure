@@ -4,20 +4,20 @@
 #include "Stack.cpp"
 #include "Queue.h"
 #include "Queue.cpp"
-#include "LinkedList.h"
-#include "LinkedList.cpp"
+//#include "LinkedList.h"
+//#include "LinkedList.cpp"
 using namespace std;
 
 int main()
 {
-    LinkedList<int> list;
+    /*LinkedList<int> list;
     list.append(7);
     list.append(1);
     list.append(9);
     list.insert(2, 8);
     list.removeAt(0);
     list.print();
-    cout << endl;
+    cout << endl;*/
     
     Stack<int> st;
     st.push(1);

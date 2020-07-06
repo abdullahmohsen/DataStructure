@@ -3,11 +3,6 @@
   Project.cpp
 D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.cpp(4,10): error C2995: 'Node<T>::Node(T)': function template has already been defined
 D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.h(9): message : see declaration of 'Node<T>::Node'
-D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.cpp(4,22): error C2059: syntax error: ':'
-D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.cpp(4,30): error C2065: 'val': undeclared identifier
-D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.cpp(4,33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.cpp(4,48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.cpp(5,1): error C2448: 'next': function-style initializer appears to be a function definition
   Queue.cpp
   Stack.cpp
   Generating Code...

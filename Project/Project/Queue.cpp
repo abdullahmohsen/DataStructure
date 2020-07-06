@@ -8,7 +8,7 @@ void Queue<T>::pop()
 	Node<T>* tmp = head->next;
 	delete head;
 	head = tmp;
-	if (head = nullptr)
+	if (head == nullptr)
 	{
 		tail = nullptr;
 	}

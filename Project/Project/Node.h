@@ -5,7 +5,7 @@ class Node
 public:
 	T value; //the value that in the node & the data type of it is template "T"
 	Node<T>* next; //Type of Node value is T & next is a pointer have the address of the next node & points on it.
-	
+
 	Node(T val); //Constructor of Node have the value & the next points on nullptr in the first
 };
 
