@@ -3,16 +3,18 @@
 #include <assert.h>
 using namespace std;
 
-//Put a newNode in the last List
+//Insert newNode at the end of List
 template <class T>
 void LinkedList<T>::append(T val)
 {
 	Node<T>* newNode = new Node<T>(val); //Create a newNode
+	//Case 1 : Empty List
 	if (head == nullptr)
 	{
 		head = newNode;
 	}
 	else
+	//Case 2 : List is not empty
 	{
 		Node<T>* currentNode = head; //currentNode is a pointer points on head
 		while (currentNode->next != nullptr) //Next of currentNode not equal Null
@@ -21,16 +23,17 @@ void LinkedList<T>::append(T val)
 		}
 		currentNode->next = newNode; //Next of currentNode equal newNode
 	}
-	size++; //when I make a newNode the number of nodes in the list will be increases 
+	//Increment size counter
+	size++; //when I insert newNode the number of nodes of the list will be increases 
 }
 
-//Put a newNode in the any index of the List
+//Insert newNode at a certain position within list by given an index and a value
 template <class T>
 void LinkedList<T>::insert(int index, T val)
 {
 	assert(index >= 0 && index <= size); //Runtime error if the condition is false (index != negative)
 	Node<T>* newNode = new Node<T>(val); //Create a newNode
-	if (index == 0) //Put a newNode in the place of the head
+	if (index == 0) //Put a newNode in the first of the list
 	{
 		newNode->next = head; //Next of newNode equal head
 		head = newNode;
@@ -50,13 +53,13 @@ void LinkedList<T>::insert(int index, T val)
 	size++;
 }
 
-//Delete a node by given it an index in the list
+//Remove node at a certain position from list by given it an index
 template <class T>
 void LinkedList<T>::removeAt(int index)
 {
 	assert(index >= 0 && index < size);
 	Node<T>* currentNode = head; //currentNode is a pointer points on head
-	if (index == 0)
+	if (index == 0) //Remove first node from the list
 	{
 		head = currentNode->next; //the next of current node equal head
 		delete currentNode;

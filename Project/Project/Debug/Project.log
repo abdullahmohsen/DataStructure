@@ -1,8 +1,4 @@
-﻿  LinkedList.cpp
-  Node.cpp
+﻿  BST.cpp
   Project.cpp
-D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.cpp(4,10): error C2995: 'Node<T>::Node(T)': function template has already been defined
-D:\Basic Programming Course\GitHub\DataStructure\Project\Project\Node.h(9): message : see declaration of 'Node<T>::Node'
-  Queue.cpp
-  Stack.cpp
   Generating Code...
+  Project.vcxproj -> D:\Basic Programming Course\GitHub\DataStructure\Project\Debug\Project.exe

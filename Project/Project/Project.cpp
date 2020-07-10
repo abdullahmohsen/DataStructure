@@ -1,11 +1,15 @@
 #include <iostream>
 #include <string>
-#include "Stack.h"
-#include "Stack.cpp"
-#include "Queue.h"
-#include "Queue.cpp"
+//#include "Stack.h"
+//#include "Stack.cpp"
+//#include "Queue.h"
+//#include "Queue.cpp"
 //#include "LinkedList.h"
 //#include "LinkedList.cpp"
+#include "Vector.h"
+#include "Vector.cpp"
+#include "BST.h"
+#include "BST.cpp"
 using namespace std;
 
 int main()
@@ -19,7 +23,7 @@ int main()
     list.print();
     cout << endl;*/
     
-    Stack<int> st;
+    /*Stack<int> st;
     st.push(1);
     st.push(2);
     st.push(3);
@@ -33,10 +37,10 @@ int main()
         st.pop();
         cout << st.top() << endl;
     }
-    cout << endl;
+    cout << endl;*/
     
     //Loop to print and pop all values in the stack
-    while (st.empty() == false)
+    /*while (st.empty() == false)
     {
         cout << st.top() << endl;
         st.pop();
@@ -49,6 +53,42 @@ int main()
     q.push(3);
     cout << q.front() << endl;
     q.pop();
-    cout << q.front() << endl;
+    cout << q.front() << endl;*/
+
+    /*Vector<int> v;
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(7);
+    cout << v[0] << endl;
+    v[0] = 100;
+    cout << v[0] << endl;
+    cout << v.back() << endl;
+    v.pop_back();
+    cout << v.back() << endl;*/
+
+    BST<int> bst;
+    bst.insert(5);
+    bst.insert(4);
+    bst.insert(3);
+    bst.insert(7);
+    bst.insert(6);
+    if (bst.find(8))
+    {
+        cout << "Worng Answer" << endl;
+    }
+    else
+    {
+        cout << "Nice" << endl;
+    }
+    bst.insert(8);
+    if (bst.find(8))
+    {
+        cout << "Nice" << endl;
+    }
+    else
+    {
+        cout << "Worng Answer" << endl;
+    }
+
     return 0;
 }
