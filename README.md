@@ -1,7 +1,12 @@
 # DataStructure
 
+
 LinkedList
+
 Stack
+
 Queue
-Vector 
+
+Vector
+
 Binary Search Tree
