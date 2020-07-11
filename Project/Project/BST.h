@@ -11,6 +11,9 @@ private:
 public:
 	void insert(T val);
 	bool find(T val); //If the node is found or not !
+	void remove(T val) {
+		removePrivate(val, root);
+	}
 	BST();
 };
 

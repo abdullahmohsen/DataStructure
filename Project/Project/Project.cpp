@@ -55,7 +55,7 @@ int main()
     q.pop();
     cout << q.front() << endl;*/
 
-    /*Vector<int> v;
+    Vector<int> v;
     v.push_back(3);
     v.push_back(4);
     v.push_back(7);
@@ -64,7 +64,7 @@ int main()
     cout << v[0] << endl;
     cout << v.back() << endl;
     v.pop_back();
-    cout << v.back() << endl;*/
+    cout << v.back() << endl;
 
     BST<int> bst;
     bst.insert(5);
@@ -88,6 +88,15 @@ int main()
     else
     {
         cout << "Worng Answer" << endl;
+    }
+    bst.remove(8);
+    if (bst.find(8))
+    {
+        cout << "Worng Answer" << endl;
+    }
+    else
+    {
+        cout << "Nice" << endl;
     }
 
     return 0;
