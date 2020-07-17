@@ -13,6 +13,7 @@ public:
 	bool find(T val); //If the node is found or not !
 	void remove(T val) {
 		removePrivate(val, root);
+		sz--;
 	}
 	BST();
 };

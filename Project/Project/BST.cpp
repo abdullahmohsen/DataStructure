@@ -89,6 +89,7 @@ bool BST<T>::find(T val)
 	}
 }
 
+//Helper Function to find minimum in a binary tree
 template<class T>
 Node<T>* findMin(Node<T>* root)
 {
@@ -99,6 +100,7 @@ Node<T>* findMin(Node<T>* root)
 	return root;
 }
 
+// Function to search a delete a value from binary tree
 template<class T>
 void removePrivate(T val, Node<T> *&root)
 {
